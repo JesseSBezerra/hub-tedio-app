@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  tedioapp:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+      args:
+        NEXT_PUBLIC_API_BASE_URL: http://191.252.195.25:8101
+    image: jessebezerra/tedioapp:latest
+    container_name: tedioapp
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
