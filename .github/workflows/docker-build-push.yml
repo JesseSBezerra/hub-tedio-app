@@ -16,7 +16,7 @@ on:
 
 env:
   DOCKER_USERNAME: jessebezerra
-  IMAGE_NAME: tediobackend
+  IMAGE_NAME: tedioapp
 
 jobs:
   build-and-push:
